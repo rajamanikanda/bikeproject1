@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<style>
+    ss code
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 700px ;
+    width:100%;
+    background-color: white;
+}
+.container ul{
+  float: right;
+  margin-top: 25px;
+}
+ ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-radius: 6px;
+    transition: .5s;
+
+}
+ul li a:hover{
+    
+    background-color: lightblue;
+}
+ul li{
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+    
+}
+.image{
+    display: inline-block;
+    position: absolute;
+    margin-left: 20px;
+    z-index: 1;
+    padding: 6px;
+
+   
+}
+.image li:hover{
+    transform: translate(20px);
+    cursor: pointer;
+    
+}
+.image li{
+
+    position: relative;
+    padding-top: 10px;
+    margin-top: 40px;
+    transition: 2s;
+    list-style-type: none;
+}
+.circle{
+   
+    width: 700px;
+    height: 700px;
+    background-color: white;
+    clip-path: circle(600px at left ) ;
+    z-index: -1;
+       
+}
+.big-img{
+  position: absolute;  
+ margin-left: 650px;
+ margin-top: -600px;
+
+}
+</style>
+<body>
+    <div class="container">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+        <div class="image">
+    
+                 <li><img src="view-cool-motorcycle-removebg-preview.png"  width="200px" onClick="big('view-cool-motorcycle.jpg');circle('whitesmoke');changeText('ROAD RAPPERS');"></li>
+                <li><img src="view-cool-motorcycle__1_-removebg-preview.png" width="250px" onClick="big('view-cool-motorcycle (1).jpg');circle('lightgrey');changeText('SOUND SYSTEM');"></li>
+                <li><img src="view-cool-powerful-motorcycle-removebg-preview (1).png"  width="250px" onClick="big('view-cool-powerful-motorcycle.jpg');circle('lightblue');changeText('BULLET');"></li>
+
+                
+        </div>
+    
+        <div class="circle">
+        </div>
+       <div class="big-img">
+            <img src="view-cool-motorcycle (1).jpg"width="800px" class="big1" >
+       <h1 id="disText">SUPER BIKES</h1>
+        
+        </div> 
+        
+        
+    </div>
+    <script>
+
+function big(img){
+    document.querySelector('.big1').src= img;
+
+}
+function circle(color){
+const circle=document.querySelector('.circle');
+circle.style.background=color;
+}
+function changeText(newText){
+    document.querySelector('#disText').innerHTML=newText;
+}
+
+    </script>
+</body>
+</html>
+
+
